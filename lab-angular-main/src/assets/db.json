@@ -1,0 +1,259 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "john.doe@example.com",
+      "password": "password123",
+      "firstName": "John",
+      "lastName": "Doe",
+      "location": "New York",
+      "mobileNumber": "1234567890"
+    },
+    {
+      "id": 2,
+      "email": "jane.smith@example.com",
+      "password": "password456",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "location": "Los Angeles",
+      "mobileNumber": "0987654321"
+    },
+    {
+      "email": "Rahul@example.com",
+      "password": "rahul123",
+      "firstName": "Rahul",
+      "lastName": "Singh",
+      "location": "India",
+      "mobileNumber": "9090909090",
+      "id": 3
+    },
+    {
+      "email": "Santosh@example.com",
+      "password": "santosh123",
+      "firstName": "Santosh",
+      "lastName": "Kumar",
+      "location": "New York",
+      "mobileNumber": "1234567890",
+      "id": 4
+    },
+    {
+      "email": "dino@123",
+      "password": "dino123",
+      "firstName": "dino",
+      "lastName": "dino",
+      "location": "dino",
+      "mobileNumber": "9090909090",
+      "id": 5
+    },
+    {
+      "email": "wipro@123",
+      "password": "wipro@123",
+      "firstName": "wipro",
+      "lastName": "singh",
+      "location": "pune",
+      "mobileNumber": "9090909090",
+      "role": "user",
+      "adminPin": "",
+      "id": 7,
+      "activeTime": 1
+    },
+    {
+      "email": "singh@123",
+      "password": "singh@123",
+      "firstName": "singh",
+      "lastName": "Dharamsena",
+      "location": "Balrampur",
+      "mobileNumber": "9191919191",
+      "role": "user",
+      "adminPin": "",
+      "id": 11
+    },
+    {
+      "email": "kamlesh@123",
+      "password": "kamlesh@123",
+      "firstName": "kamlesh",
+      "lastName": "kumar",
+      "location": "london",
+      "mobileNumber": "8898898899",
+      "role": "admin",
+      "adminPin": "5566",
+      "id": 12
+    },
+    {
+      "email": "rohit45@gmail.com",
+      "password": "rohit45",
+      "firstName": "Rohit",
+      "lastName": "Sharma",
+      "location": "Mumbai",
+      "mobileNumber": "1234567890",
+      "role": "admin",
+      "adminPin": "1845",
+      "id": 13,
+      "activeTime": 0
+    },
+    {
+      "email": "jaiswal@gmail.com",
+      "password": "jaiswal",
+      "firstName": "Yashwi ",
+      "lastName": "Jaiswal",
+      "location": "Mumbai",
+      "mobileNumber": "0987654321",
+      "role": "user",
+      "adminPin": "",
+      "id": 14,
+      "activeTime": 10
+    },
+    {
+      "email": "user@123",
+      "password": "user123",
+      "firstName": "user",
+      "lastName": "user",
+      "location": "delhi",
+      "mobileNumber": "9191919191",
+      "role": "user",
+      "adminPin": "",
+      "id": 15,
+      "activeTime": 0
+    },
+    {
+      "email": "virat18@gmail.com",
+      "password": "virat18",
+      "firstName": "virat",
+      "lastName": "kohli",
+      "location": "Delhi",
+      "mobileNumber": "0000000000",
+      "role": "admin",
+      "adminPin": "1818",
+      "id": 16
+    },
+    {
+      "email": "dhoni@123",
+      "password": "dhoni@123",
+      "firstName": "mahender",
+      "lastName": "dhoni",
+      "location": "ranchi",
+      "mobileNumber": "2323232323",
+      "role": "user",
+      "adminPin": "",
+      "id": 17
+    }
+  ],
+  "products": [
+    {
+      "id": 1742024754097,
+      "name": "RashmiRathi",
+      "description": "Book By Dinkar Ji",
+      "manufacturer": "Ramdhari singh Dinkar",
+      "manufacturingDate": "2025-03-12",
+      "price": 990,
+      "quantity": 500,
+      "category": "Books",
+      "supplier": {
+        "name": "wipro",
+        "contact": "1212121212"
+      }
+    },
+    {
+      "id": 1742024754098,
+      "name": "Rangbhoomi",
+      "description": "Great Book",
+      "manufacturer": "Premchand",
+      "manufacturingDate": "2025-03-08",
+      "price": 888,
+      "quantity": 9,
+      "category": "Books"
+    },
+    {
+      "name": "Isolate Whey Protein",
+      "description": "Best health product for fitness and muscle ",
+      "manufacturer": "Optimum Nutrition",
+      "manufacturingDate": "2025-02-04",
+      "price": 1100,
+      "quantity": 25,
+      "category": "Health",
+      "id": 1742024754100
+    },
+    {
+      "id": 1742024754101,
+      "name": "Cetaphil ",
+      "description": "Face wash",
+      "manufacturer": "Patanjali",
+      "manufacturingDate": "2025-03-26",
+      "price": 900,
+      "quantity": 250,
+      "category": "SkinCare",
+      "supplier": {
+        "name": "Shakti Traders",
+        "contact": "0000000000"
+      },
+      "availabilityStatus": "In Stock",
+      "ratings": [
+        {
+          "rating": "4",
+          "review": "best",
+          "userId": 16
+        }
+      ]
+    },
+    {
+      "name": "NoteBook",
+      "description": "Notebook to write something",
+      "manufacturer": "Classmate",
+      "manufacturingDate": "2025-02-19",
+      "price": 20,
+      "quantity": 1900,
+      "category": "Stationary",
+      "id": 1742024754102
+    },
+    {
+      "name": "SunSilk",
+      "description": "Hair shampoo for silky hairs",
+      "manufacturer": "HUL",
+      "manufacturingDate": "2025-03-01",
+      "price": 90,
+      "quantity": 11,
+      "category": "SkinCare",
+      "supplier": {
+        "name": "Ambani Traders",
+        "contact": "9191919191"
+      },
+      "id": 1742024754103
+    },
+    {
+      "id": 1742024754104,
+      "name": "Monohydrate Creatine",
+      "description": "Creatine ",
+      "manufacturer": "Optimum Nutrition",
+      "manufacturingDate": "2025-02-07",
+      "price": 800,
+      "quantity": 120,
+      "category": "Health",
+      "supplier": {
+        "name": "Aman Supplements",
+        "contact": "9999888800"
+      },
+      "availabilityStatus": "In Stock",
+      "ratings": [
+        {
+          "rating": "5",
+          "review": "Best health product\n",
+          "userId": 8
+        }
+      ]
+    },
+    {
+      "name": "computer Science book",
+      "description": "Book for computer science",
+      "manufacturer": "Ajanta",
+      "manufacturingDate": "2025-03-06",
+      "price": 123,
+      "quantity": 9,
+      "category": "Books",
+      "supplier": {
+        "name": "abc",
+        "contact": "3434343434"
+      },
+      "id": 1742024754105
+    }
+  ]
+}

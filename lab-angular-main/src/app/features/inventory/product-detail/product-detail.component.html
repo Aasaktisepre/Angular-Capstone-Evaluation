@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="card">
+    <h2>Product Details</h2>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <div *ngIf="product">
+      <p><strong>Name:</strong> {{ product.name }}</p>
+      <p><strong>Description:</strong> {{ product.description }}</p>
+      <p><strong>Manufacturer:</strong> {{ product.manufacturer }}</p>
+      <p><strong>Manufacturing Date:</strong> {{ product.manufacturingDate }}</p>
+      <p><strong>Price:</strong> {{ product.price }}</p>
+      <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+      <p><strong>Category:</strong> {{ product.category || 'N/A' }}</p>
+      <p>
+        <strong>Availability:</strong>
+        <span [ngClass]="getAvailabilityClass()">{{ product.availabilityStatus }}</span>
+      </p>
+      <p>
+        <strong>Supplier:</strong> {{ product.supplier?.name || 'N/A' }} (Contact: {{ product.supplier?.contact || 'N/A' }})
+      </p>
+      <div *ngIf="product.ratings?.length">
+        <h3>Reviews</h3>
+        <ul>
+          <li *ngFor="let rating of product.ratings; let i = index">
+            {{ getUserName(rating.userId) }}: {{ rating.rating }} stars - "{{ rating.review }}"
+            <button *ngIf="userId === rating.userId" (click)="startEditRating(i)">Edit</button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>{{ editRatingIndex !== null ? 'Edit Rating' : 'Add Rating' }}</h3>
+        <select [(ngModel)]="newRating">
+          <option value="0">Select Rating</option>
+          <option *ngFor="let i of [1, 2, 3, 4, 5]" [value]="i">{{ i }}</option>
+        </select>
+        <textarea [(ngModel)]="newReview" placeholder="Write a review"></textarea>
+        <button (click)="submitRating()">{{ editRatingIndex !== null ? 'Update Rating' : 'Submit' }}</button>
+      </div>
+      <a routerLink="/inventory">Back to Inventory</a>
+    </div>
+    <div *ngIf="!product && !errorMessage">Loading...</div>
+  </div>
+</div>

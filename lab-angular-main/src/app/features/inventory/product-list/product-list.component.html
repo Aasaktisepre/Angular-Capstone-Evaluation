@@ -1,0 +1,44 @@
+<div class="inventory-container">
+  <h2>Product List</h2>
+  <div class="user-info">
+  </div>
+  <div class="search-add-container">
+    <app-search-filter (search)="onSearch($event)"></app-search-filter>
+    <div class="category-filter">
+      <label for="category">Filter by Category:</label>
+      <select id="category" [(ngModel)]="selectedCategory" (ngModelChange)="onCategoryChange($event)">
+        <option value="">All Categories</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+    </div>
+    <button (click)="addProduct()" class="add-button">Add Product</button>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Category</th>
+        <th>Availability</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of filteredProducts">
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.category || 'N/A' }}</td>
+        <td [ngClass]="getAvailabilityClass(product.availabilityStatus)">{{ product.availabilityStatus }}</td>
+        <td>
+          <button (click)="viewProduct(product.id)">View</button>
+          <button (click)="editProduct(product.id)">Edit</button>
+          <button (click)="deleteProduct(product.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="filteredProducts.length === 0">No products found.</div>
+</div>

@@ -1,0 +1,32 @@
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2px;
+    background: #151515;
+    color: white;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fixes footer at the bottom */
+    bottom: 0;
+    left: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    flex: 1; /* Pushes footer down */
+    width: 80%;
+    margin: auto;
+    padding-top: 60px; /* Adjust for navbar */
+    padding-bottom: 80px; /* Extra space for fixed footer */
+}
+
+.developer {
+    font-size: 14px;
+    margin-top: 5px;
+}
